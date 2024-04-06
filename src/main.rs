@@ -15,17 +15,8 @@ async fn main() -> Result<(), reqwest::Error> {
         .json()
         .await?;
 
-    println!("{:#?}", todos);
+    println!("{:#?}", todos.cross_section);
+    println!("{:#?}", todos.energy);
 
     Ok(())
 }
-
-// #[tokio::main]
-// async fn main() -> Result<(), Box<dyn std::error::Error>> {
-//     let resp = reqwest::get("https://raw.githubusercontent.com/shimwell/example_rust_json_parsing/main/example.json")
-//         .await?
-//         .json::<serde_json::Value>()
-//         .await?;
-//     println!("{:#?} lol", resp);
-//     Ok(())
-// }
